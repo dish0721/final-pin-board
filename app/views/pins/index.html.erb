@@ -1,0 +1,33 @@
+<div id ="pins" class="transitions-enabled">
+	<% @pins.each do |pin| %>
+		<div class="box">
+			<div class="panel panel-default">
+				<%= link_to (image_tag pin.image.url),pin %>
+				<h2>
+					<%=link_to pin.title,pin %>
+				</h2>
+				<p class="user">
+					<div class="dp">
+					<%= link_to (image_tag pin.user.dp.url(:thumb), style:'border-radius:20px; height: 40px;
+						width: 40px; float:left') %>
+						<br>
+						<h4>Submitted By:
+						<%=pin.user.email%></h4>
+					</div>
+					
+				</p>
+			</div>
+		</div>
+		<div class="panel-body">
+				
+			<%end%>
+		</div>
+	</div>
+	<style type="text/css">
+		.dp{
+			
+			
+		}
+	</style>
+
+
